@@ -8,23 +8,58 @@
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
+    <!--<script type="text/javascript">
+        function scrolling(){
+       window.scrollTo(0,500);
+        }
+      </script>-->
+    <!--<div style="height: 73px;"></div>-->
     <div class="header">
-        <div class="header-child"><div class="header-font">Header Logo</div>
+        <div class="header-child"><div><a class="header-font" href="">SISTEMAS SH</a></div>
         <ul>
-            <li><a href="" alt="">header link one</a></li>
-            <li><a href="" alt="">header link two</a></li>
-            <li><a href="" alt="">header link three</a></li>
+            <li><a href="#services" alt="">Servicios</a></li>
+            <li><a href="" alt="">Ubicación</a></li>
+            <li><a href="" alt="">Contacto</a></li>
         </ul></div>
     </div>
     <div class="first">
         <div class="first-child"><div class="hero">
-            <div class="main-text">This website is awesome</div>
-            <div class="second-text">This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</div>
-            <button href="https://www.example.com">Sign up</button>
+            <div class="main-text">Servicio Técnico Especializado</div>
+            <div class="second-text">Trabajamos con las marcas mas importantes del mercado,  
+                ventas y reparacion de computadoras, laptops, impresoras y equipos electronicos
+                en general etc etc etc </div>
+            <a class="link" href="#services">Más información</a>
+            <div id="services"></div>
         </div>
-        <div class="image">
-            <div>this is a placeholder for an image</div>
-        </div></div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/microelec.jpg" style="width:100%">
+                    <!--<div class="text">Caption Text</div>-->
+                    
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/microelec2.jpg" style="width:100%">
+                    <!--<div class="text">Caption Two</div>-->
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/microelec3.jpg" style="width:100%">
+                    <!--<div class="text">Caption Three</div>-->
+                </div>
+                <div class="dot-container">
+                    <div class="dot" onclick="currentSlide(1)"></div>
+                    <div class="dot" onclick="currentSlide(2)"></div>
+                    <div class="dot" onclick="currentSlide(3)"></div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
     </div>
     <div class="second">Some random information.</div>
     <div class="second-two">
@@ -51,5 +86,51 @@
     <div class="footer">
         <div>Copyright Ⓒ Landing page 2021</div>
     </div>
+
+    <script type="text/javascript">
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+        var slideIndexAuto = 0;
+        showSlidesAuto();
+
+        function showSlidesAuto() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndexAuto++;
+            if (slideIndexAuto > slides.length) {slideIndexAuto = 1}
+            slides[slideIndexAuto-1].style.display = "block";
+            setTimeout(showSlidesAuto, 2000); // Change image every 2 seconds
+        }
+    </script>
 </body>
 </html>
