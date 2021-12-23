@@ -29,6 +29,7 @@ body {
     flex: 0 1 85%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header-font{
@@ -199,7 +200,7 @@ p {
     padding: 40px;
 }
 
-ul {
+.uul {
     margin: 0;
     padding: 0;
     display: flex;

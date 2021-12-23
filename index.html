@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
     <!--<script type="text/javascript">
@@ -15,12 +16,24 @@
       </script>-->
     <!--<div style="height: 73px;"></div>-->
     <div class="header">
-        <div class="header-child"><div><a class="header-font" href="">SISTEMAS SH</a></div>
-        <ul>
-            <li><a href="#services" alt="">Servicios</a></li>
-            <li><a href="" alt="">Ubicación</a></li>
-            <li><a href="" alt="">Contacto</a></li>
-        </ul></div>
+        <div class="header-child">
+            <div><a class="header-font" href="">SISTEMAS SH</a></div>
+            <button class="navbar-toggler navbar-toggler-right d-md-none" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#services" alt="">Servicios</a></li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="" alt="">Ubicación</a></li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="" alt="">Contacto</a></li>
+                </ul>
+            </div>
+            <ul class="uul">
+                <li ><a href="#services" alt="">Servicios</a></li>
+                <li ><a href="" alt="">Ubicación</a></li>
+                <li ><a href="" alt="">Contacto</a></li>
+            </ul>
+        </div>
     </div>
     <div class="first">
         <div class="first-child"><div class="hero">
@@ -29,7 +42,7 @@
                 ventas y reparacion de computadoras, laptops, impresoras y equipos electronicos
                 en general etc etc etc </div>
             <a class="link" href="#services">Más información</a>
-            <div id="services"></div>
+            <!--<div id="services"></div>-->
         </div>
             <div class="slideshow-container">
                 <div class="mySlides fade">
@@ -61,7 +74,7 @@
             </div>
         </div>
     </div>
-    <div class="second">Some random information.</div>
+    <div class="second" id="services">Some random information.</div>
     <div class="second-two">
         <div>
             <div class="box-image"></div><div class="second-text">this is some subtext under an ilustration or image</div>
@@ -132,5 +145,28 @@
             setTimeout(showSlidesAuto, 2000); // Change image every 2 seconds
         }
     </script>
+
+    <script>
+        
+        //var displayStatus=document.getElementsByClassName('uul')[0].style.display;
+
+        if(windowWidth=document.documentElement.clientWidth<753){
+            document.getElementsByClassName('uul')[0].style.display='none';
+        }
+
+        function hideShowNav(){
+            var windowWidth=document.documentElement.clientWidth;
+            document.getElementsByClassName('uul')[0].style.display= (windowWidth<753) ? 'none' : '';
+            //return windowWidth;
+        }
+
+        window.addEventListener('resize', hideShowNav);
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>
