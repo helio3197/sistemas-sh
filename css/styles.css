@@ -44,6 +44,7 @@ body {
     padding: 80px 0 100px 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     
     
 }
@@ -54,13 +55,14 @@ body {
     flex: 0 1 85%;
     gap: 0px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero {
     
     display: flex;
     flex-direction: column;
-    flex: 0 1 50%;
+    flex: 1 1 50%;
     align-items: center;
     
 }
@@ -90,16 +92,17 @@ body {
     
 }
 
-.image {
+/*#image {
     
     width: 50%;
     
-    /*background-color: gray;
+    background-color: gray;
     display: flex;
     justify-content: center;
     align-items:center;
-    color: white;*/
-}
+    color: white;
+}*/
+
 
 .second {
     font-size: 36px;
@@ -223,6 +226,7 @@ a {
     margin: auto;
     box-sizing:border-box;
     width: 50%;
+    flex: 1 1 50%;
   }
   
   /* Hide the images by default */
@@ -304,14 +308,14 @@ a {
   }
   
   /* Fading animation */
-  .fade {
+  /*.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-  }
+  }*/
   
-  @-webkit-keyframes fade {
+ /* @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
   }
@@ -319,4 +323,4 @@ a {
   @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+  }/*
