@@ -147,6 +147,16 @@ body {
   border-radius: 12px;
 }
 
+h3 {
+  text-align: center;
+  color: #1f2937;
+  font-weight: bolder;
+}
+
+#services-container {
+  flex: 0 0 85%;
+}
+
 .third {
     background-color: #e5e7eb;
     display: flex;
