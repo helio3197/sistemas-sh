@@ -7,7 +7,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
+    align-items: center;
     margin: 0;
     font-family: Roboto, sans-serif;
 }
@@ -38,6 +38,11 @@ body {
     font-weight: bold;
 }
 
+li {
+  display: flex;
+  align-items: center;
+}
+
 li:hover{
   opacity: 0.5;
 }
@@ -45,7 +50,7 @@ li:hover{
 .first {
     margin-top: 62px;
     background-color: #1f2937;
-    padding: 80px 0 100px 0;
+    padding: 80px 0 80px 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -118,7 +123,8 @@ li:hover{
     font-weight: bolder;
     color: #1f2937;
     text-align: center;
-    padding: 40px;
+    padding: 40px 0;
+    width: 85%;
 }
 
 .second-two { 
@@ -145,6 +151,12 @@ li:hover{
     font-size: 17px;
 }
 
+#services-container .second-text {
+  color: #1f2937;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
 .box-image {
     height: 160px;
     width: 160px;
@@ -160,6 +172,7 @@ li:hover{
 }
 
 h3 {
+  width: 85%;
   text-align: center;
   color: #1f2937;
   font-weight: bolder;
@@ -169,6 +182,24 @@ h3 {
 #services-container {
   display: flex;
   flex: 0 0 85%;
+  gap: 10px;
+}
+
+#services-container-column {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.services-image {
+  width: 50%;
+}
+
+.secondary-text{
+  /*width: 50%;*/
+  color: #1f2937;
+  font-size: 18px;
 }
 
 .third {
