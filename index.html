@@ -75,7 +75,7 @@
         </div>
         <a class="link" id="hide-button-bottom" href="#services">Más información</a>
     </div>
-    <div class="second" id="services">Servicios y productos</div>
+    <div class="second" id="services">Productos y Servicios</div>
     <div class="second-two">
         <div onclick="document.getElementById('first-head').scrollIntoView()">
             <div class="box-image"><img src="img/elec1.jpg" class="image-square"></div><div class="second-text">Servicio técnico en general</div>
@@ -83,10 +83,10 @@
         <div onclick="document.getElementById('second-head').scrollIntoView()">
             <div class="box-image"><img src="img/accessories.jpg" class="image-square"></div><div class="second-text">Venta de respuestos y accesorios</div>
         </div>
-        <div>
+        <div onclick="document.getElementById('third-head').scrollIntoView()">
             <div class="box-image"><img src="img/valery.png" class="image-square"></div><div class="second-text">Instalación de software</div>
         </div>
-        <div>
+        <div onclick="document.getElementById('fourth-head').scrollIntoView()">
             <div class="box-image"><img src="img/business.jpeg" class="image-square"></div><div class="second-text">Servicio especial para negocios</div>
         </div>
     </div>
@@ -111,13 +111,44 @@
         <div id="services-container">
             <img id="services-image" src="img/Computer-Accessories.jpg">
             <div class="secondary-text">
-                Contamos con amplia experiencia brindando soporte técnico y la atencion de la mas alta calidad a nuestros clientes.
-                 Ofrecemos todo tipo de servicio y soporte tecnico para una amplia gama de equipos y dispositivos electrónicos:
+                Tenemos a la venta todo tipo de copmputadoras y accesorios de las mejores marcas, desde laptops y computadoras de escritorios 
+                hasta audífonos y memorias usb:
                 <ul>
-                    <li>&bull; Revisión y diagnóstico de computadoras, laptops, impresoras y todo equipo de ofimática</li>
-                    <li>&bull; Revisión y diagnóstico de televisores y todo tipo de electrodomésticos</li>
-                    <li>&bull; Revisión y diagnóstico de balanzas de todas las marcas </li>
-                    <li>&bull; Mucho más...</li>
+                    <li>&bull; Computadoras, laptops e impresoras</li>
+                    <li>&bull; Teclados, mouse, altavoces y todo tipo de periféricos</li>
+                    <li>&bull; Respuestos y partes de todas las marcas para computadoras y laptops</li>
+                    <li>&bull; Accesorios para laptops y telefonos como fundas, memorias sd y usb, protectores de pantalllas, cámaras web y mucho más.</li>
+                    <li>&bull; Enviós a todo el país a través de nuestra página de &nbsp;<a target="_blank" href="https://www.mercadolibre.com.ve/perfil/sistemas-sh" style="color: #007bff;">MercadoLibre</a></li>
+                </ul>
+                </div>
+        </div>
+    </div>
+    <h3 id="third-head">Somos distrinuidores licenciados de software administrativo</h3>
+    <div style="display: flex; justify-content: center;">
+        <div id="services-container">
+            <img id="services-image" src="img/valery-screen.jpg">
+            <div class="secondary-text">
+                Tenemos a su disposición toda la familia del software empresarial Valery, en todas su versiones:
+                <ul>
+                    <li>&bull; Vendemos licencias originales Valery</li>
+                    <li>&bull; Servicio de instalación gratuito</li>
+                    <li>&bull; Soporte técnico personalizado garantizado</li>
+                    <li>&bull; Atención al cliente durante todo el año</li>
+                </ul>
+                </div>
+        </div>
+    </div>
+    <h3 id="fourth-head">Servicio personalizado a domicilio para empresas y comercios</h3>
+    <div style="display: flex; justify-content: center;">
+        <div id="services-container">
+            <img id="services-image" src="img/business-deal.jpg">
+            <div class="secondary-text">
+                Prestamos servicio a domicilio para comercios y empresas sin costo adicional:
+                <ul>
+                    <li>&bull; Servicio técnico profesional</li>
+                    <li>&bull; Instalación de CCTV</li>
+                    <li>&bull; Instalación de software licenciado</li>
+                    <li>&bull; Atención personalizada</li>
                 </ul>
                 </div>
         </div>
@@ -185,17 +216,19 @@
         const images= document.getElementsByClassName('image');
         const buttonTop= document.getElementById('hide-button-top');
         const buttonBottom= document.getElementById('hide-button-bottom');
-
-        for (let i=0; i<images.length; i++){
+        console.log(document.getElementsByClassName('slideshow-container')[0].clientWidth)
+        
+        /*for (let i=0; i<images.length; i++){
                 images[i].style.height=`${3/4*document.getElementsByClassName('slideshow-container')[0].clientWidth}`+'px';
-        }
+                console.log('done');
+        }*/
 
         if(windowWidth=document.documentElement.clientWidth<753){
             document.getElementsByClassName('uul')[0].style.display='none';
             buttonTop.style.display='none';
             document.getElementsByClassName('first')[0].style.paddingTop='40px';
             document.getElementsByClassName('first')[0].style.paddingBottom='40px';
-            for(let i=0; i<2; i++){
+            for(let i=0; i<4; i++){
                 document.getElementById('services-container').id='services-container-column';
                 document.getElementById('services-image').id='services-image-column';
             }
@@ -227,6 +260,13 @@
             }
             //return windowWidth;
         }
+
+        setTimeout(()=>{
+            for (let i=0; i<images.length; i++){
+                images[i].style.height=`${3/4*document.getElementsByClassName('slideshow-container')[0].clientWidth}`+'px';
+                console.log('done');
+            }
+        },150);
 
         window.addEventListener('resize', hideShowNav);
 
