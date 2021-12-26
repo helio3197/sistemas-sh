@@ -175,7 +175,7 @@ h3 {
   width: 85%;
   text-align: center;
   color: #1f2937;
-  font-weight: bolder;
+  font-weight: 900;
   padding-bottom: 25px;
 }
 
@@ -183,6 +183,7 @@ h3 {
   display: flex;
   flex: 0 0 85%;
   gap: 10px;
+  margin-bottom: 20px;
 }
 
 #services-container-column {
@@ -190,10 +191,15 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 85%;
+  margin-bottom: 20px;
 }
 
-.services-image {
+#services-image {
   width: 50%;
+}
+
+#services-image-column {
+  width: 100%;
 }
 
 .secondary-text{

@@ -80,7 +80,7 @@
         <div onclick="document.getElementById('first-head').scrollIntoView()">
             <div class="box-image"><img src="img/elec1.jpg" class="image-square"></div><div class="second-text">Servicio técnico en general</div>
         </div>
-        <div>
+        <div onclick="document.getElementById('second-head').scrollIntoView()">
             <div class="box-image"><img src="img/accessories.jpg" class="image-square"></div><div class="second-text">Venta de respuestos y accesorios</div>
         </div>
         <div>
@@ -93,7 +93,23 @@
     <h3 id="first-head">Servicio técnico para computadoras y equipos electrónicos en general</h3>
     <div style="display: flex; justify-content: center;">
         <div id="services-container">
-            <img class="services-image" src="img/pc-repair.png">
+            <img id="services-image" src="img/pc-repair.png">
+            <div class="secondary-text">
+                Contamos con amplia experiencia brindando soporte técnico y la atencion de la mas alta calidad a nuestros clientes.
+                 Ofrecemos todo tipo de servicio y soporte tecnico para una amplia gama de equipos y dispositivos electrónicos:
+                <ul>
+                    <li>&bull; Revisión y diagnóstico de computadoras, laptops, impresoras y todo equipo de ofimática</li>
+                    <li>&bull; Revisión y diagnóstico de televisores y todo tipo de electrodomésticos</li>
+                    <li>&bull; Revisión y diagnóstico de balanzas de todas las marcas </li>
+                    <li>&bull; Mucho más...</li>
+                </ul>
+                </div>
+        </div>
+    </div>
+    <h3 id="second-head">Ofrecemos todo tipo de accesorios, equipos y respuestos de las mejores marcas</h3>
+    <div style="display: flex; justify-content: center;">
+        <div id="services-container">
+            <img id="services-image" src="img/Computer-Accessories.jpg">
             <div class="secondary-text">
                 Contamos con amplia experiencia brindando soporte técnico y la atencion de la mas alta calidad a nuestros clientes.
                  Ofrecemos todo tipo de servicio y soporte tecnico para una amplia gama de equipos y dispositivos electrónicos:
@@ -179,8 +195,10 @@
             buttonTop.style.display='none';
             document.getElementsByClassName('first')[0].style.paddingTop='40px';
             document.getElementsByClassName('first')[0].style.paddingBottom='40px';
-            document.getElementById('services-container').id='services-container-column';
-            document.getElementsByClassName('services-image')[0].style.width='100%'
+            for(let i=0; i<2; i++){
+                document.getElementById('services-container').id='services-container-column';
+                document.getElementById('services-image').id='services-image-column';
+            }
         }else{
             buttonBottom.style.display='none';
         }
@@ -194,14 +212,14 @@
                 document.getElementsByClassName('first')[0].style.paddingTop='40px';
                 document.getElementsByClassName('first')[0].style.paddingBottom='40px'
                 if(document.getElementById('services-container')) document.getElementById('services-container').id='services-container-column';
-                document.getElementsByClassName('services-image')[0].style.width='100%'
+                if(document.getElementById('services-image'))document.getElementById('services-image').id='services-image-column';
             }else{
                 buttonTop.style.display='';
                 buttonBottom.style.display='none';
                 document.getElementsByClassName('first')[0].style.paddingTop='80px';
                 document.getElementsByClassName('first')[0].style.paddingBottom='80px';
                 if(document.getElementById('services-container-column')) document.getElementById('services-container-column').id='services-container';
-                document.getElementsByClassName('services-image')[0].style.width='50%';
+                if(document.getElementById('services-image-column'))document.getElementById('services-image-column').id='services-image';
             }
             for (let i=0; i<images.length; i++){
                 images[i].style.height=`${3/4*document.getElementsByClassName('slideshow-container')[0].clientWidth}`+'px';
