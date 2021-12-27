@@ -123,7 +123,7 @@ li:hover{
     font-weight: bolder;
     color: #1f2937;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
     width: 85%;
 }
 
@@ -208,21 +208,24 @@ h3 {
   font-size: 18px;
 }
 
+.secondary-text li {
+  display: list-item;
+}
+
 .third {
     background-color: #e5e7eb;
     display: flex;
-    font-size: 36px;
-    font-style: italic;
+    flex-direction: column;
+    font-size: 22px;
+    font-weight: 500;
     color: #1f2937;
-    padding: 123px 0 91px;
-    justify-content: center;
-    
+    align-items: center;
+    width: 100%;
+    padding-bottom: 60px;
      
 }
 
-.third div {
-    flex: 0 1 54%;
-}
+
 
 p {
     margin: 0;
