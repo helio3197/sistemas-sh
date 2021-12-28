@@ -7,6 +7,7 @@
     <title>Sistemas SH C.A.</title>
     <link href="css/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--<script type="text/javascript">
@@ -25,13 +26,13 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#services" alt="">Servicios</a></li>
                     <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#location" alt="">Ubicación</a></li>
-                    <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="" alt="">Contacto</a></li>
+                    <li data-toggle="collapse" data-target=".navbar-collapse.show"><a href="#contact" alt="">Contacto</a></li>
                 </ul>
             </div>
             <ul class="uul">
                 <li ><a href="#services" alt="">Servicios</a></li>
                 <li ><a href="#location" alt="">Ubicación</a></li>
-                <li ><a href="" alt="">Contacto</a></li>
+                <li ><a href="#contact" alt="">Contacto</a></li>
             </ul>
         </div>
     </div>
@@ -162,16 +163,68 @@
             </div>
             <div class="change-to-width" style="width: 50%; display: flex; flex-direction: column;">
                 <img src="img/sistemas-sh.png" alt="sistemas-sh-front" style="width: 100%;">
-                <!--<div class="mapouter" style="width:100%;"><div class="gmap_canvas" style="width:100%;"><iframe width="100%" height="400px" id="gmap_canvas" src="https://maps.google.com/maps?q=8.27766968060841,%20-62.77641613595388&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:428px;width:100%;}</style><style class="">.gmap_canvas {overflow:hidden;background:none!important;height:428px;width:100%;}</style></div></div>-->
             </div>
         </div>
     </div>
+    <div id="contact" class="second">Contacto</div>
     <div class="fourth">
-        <div class="fourth-child"><div class="fourth-child-son"><div><div class="header-font">Contacto section</div><div class="second-text" style="margin-bottom: 0;">textooooooo</div></div><button class="button">Sign up</button></div>
+        <div id="fourth-child">
+            <div style="width: 45%;">
+                Contacta con nosotros:
+                <br>
+                <span class="fa fa-phone"></span> 0286-9531618
+                <br>
+                <span class="fa fa-whatsapp"></span> <a href="https://api.whatsapp.com/send?phone=584161840250" target="blank_">0416-1840250</a>
+                <br>
+                <span class="fa fa-whatsapp"></span> <a href="https://api.whatsapp.com/send?phone=584249028378" target="blank_">0424-9028378</a>
+                <br>
+                <span class="fa fa-envelope-square"></span> sistemassh.ca@gmail.com
+            </div>
+            <div style="width: 45%;">
+                <span>Consulta o sugerencias? Déjanos un mensaje:</span>
+                <form style="font-size: 18px;">
+                    <div class="form-box">
+                        <label for="email">Correo:</label>
+                        <input type="text" id="email" name="email" style="font-size: 12px; flex: 1 1 auto;">
+                    </div>
+                    <div class="form-box" style="gap: 4%;">
+                        <label for="message">Texto:</label>
+                        <textarea id="message" name="message" style="font-size: 12px; flex: 1 1 auto;"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" style="font-size: 12px; margin-top: 5px; padding: 1px 12px;" onclick="alert('Su mensaje fue enviado. Gracias!')">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="fourth-child-column">
+        <div style="width: 80%;">
+            Contacta con nosotros:
+            <br>
+            <span class="fa fa-phone"></span> 0286-9531618
+            <br>
+            <span class="fa fa-whatsapp"></span> <a href="https://api.whatsapp.com/send?phone=584161840250" target="blank_">0416-1840250</a>
+            <br>
+            <span class="fa fa-whatsapp"></span> <a href="https://api.whatsapp.com/send?phone=584249028378" target="blank_">0424-9028378</a>
+            <br>
+            <span class="fa fa-envelope-square"></span> sistemassh.ca@gmail.com
+        </div>
+        <div style="width: 80%;">
+            <span>Consulta o sugerencias? Déjanos un mensaje:</span>
+            <form style="font-size: 20px;">
+                <div class="form-box-column">
+                    <label for="email">Correo:</label>
+                    <input type="text" id="email" name="email" style="font-size: 12px; flex: 1 1 auto;">
+                </div>
+                <div class="form-box-column" style="gap: 4%;">
+                    <label for="message">Texto:</label>
+                    <textarea id="message" name="message" style="font-size: 12px; flex: 1 1 auto;"></textarea>
+                </div>
+                <input type="submit" value="Enviar" style="font-size: 16px; margin-top: 15px; padding: 1px 12px; align-self: center;" onclick="alert('Su mensaje fue enviado. Gracias!')">
+            </form>
         </div>
     </div>
     <div class="footer">
-        <div>Sistemas SH C.A. Rif: 123456789</div>
+        <div>Sistemas SH C.A. Rif: J-40189744-4</div>
     </div>
 
     <script type="text/javascript">
@@ -248,8 +301,10 @@
             document.getElementsByClassName('change-to-width')[0].style.height='350px';
             document.getElementsByClassName('change-to-width')[1].style.width='100%';
             document.getElementById('location-column').style.gap='10px';
+            document.getElementById('fourth-child').style.display='none';
         }else{
             buttonBottom.style.display='none';
+            document.getElementById('fourth-child-column').style.display='none';
         }
 
         function hideShowNav(){
@@ -268,6 +323,8 @@
                 document.getElementsByClassName('change-to-width')[1].style.width='100%';
                 document.getElementById('location-column').style.flexDirection='column';
                 document.getElementById('location-column').style.gap='10px';
+                document.getElementById('fourth-child').style.display='none';
+                document.getElementById('fourth-child-column').style.display='';
             }else{
                 buttonTop.style.display='';
                 buttonBottom.style.display='none';
@@ -281,6 +338,8 @@
                 document.getElementsByClassName('change-to-width')[1].style.width='50%';
                 document.getElementById('location-column').style.gap='0';
                 document.getElementById('location-column').style.flexDirection='row';
+                document.getElementById('fourth-child').style.display='';
+                document.getElementById('fourth-child-column').style.display='none';
             }
             for (let i=0; i<images.length; i++){
                 images[i].style.height=`${3/4*document.getElementsByClassName('slideshow-container')[0].clientWidth}`+'px';

@@ -238,30 +238,87 @@ p {
 
 .fourth {
     display: flex;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    flex-basis: 340px;
 }
+    
 
-.fourth-child {
+#fourth-child {
     background-color: #3882f6;
     border-radius: 8px;
-    flex-basis: 73%;
+    flex-basis: 85%;
     display: flex;
-    justify-content: center;
     padding: 50px 0;
+    margin-bottom: 40px;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+#fourth-child-column {
+  background-color: #3882f6;
+  border-radius: 8px;
+  flex-basis: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0;
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  gap: 10px;
 }
 
 .fourth-child-son {
-    flex-basis: 74%;
+    /*flex-basis: 74%;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+}
+
+#fourth-child a {
+  color: white;
+  font-size: 24px;
+}
+
+#fourth-child-column a {
+  color: white;
+  font-size: 20px;
+}
+
+#fourth-child a:hover{
+  opacity: 0.5;
+}
+
+#fourth-child-column a:hover{
+  opacity: 0.5;
 }
 
 .button {
     border: 2px solid white;
     flex: 0 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-box {
+  display: flex;
+  align-items: baseline;
+  width: 80%;
+  gap: 1%;
+}
+
+.form-box-column {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  gap: 1%;
 }
 
 .footer {
@@ -272,6 +329,8 @@ p {
     justify-content: center;
     color: white;
     padding: 40px;
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .uul {
