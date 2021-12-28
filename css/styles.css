@@ -326,10 +326,11 @@ form {
     font-size: 18px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: white;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
+    flex-wrap: wrap;
     margin-bottom: 0;
 }
 
