@@ -202,13 +202,23 @@ h3 {
   width: 100%;
 }
 
-.secondary-text{
+#secondary-text{
   width: 50%;
   color: #1f2937;
   font-size: 18px;
 }
 
-.secondary-text li {
+#secondary-text-column{
+  width: 100%;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+#secondary-text li {
+  display: list-item;
+}
+
+#secondary-text-column li {
   display: list-item;
 }
 

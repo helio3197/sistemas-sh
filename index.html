@@ -95,7 +95,7 @@
     <div style="display: flex; justify-content: center; width: 100%;">
         <div id="services-container">
             <img id="services-image" src="img/pc-repair.png">
-            <div class="secondary-text">
+            <div id="secondary-text">
                 Contamos con amplia experiencia brindando soporte técnico y la atencion de la mas alta calidad a nuestros clientes.
                  Ofrecemos todo tipo de servicio y soporte tecnico para una amplia gama de equipos y dispositivos electrónicos:
                 <ul>
@@ -111,7 +111,7 @@
     <div style="display: flex; justify-content: center; width: 100%;">
         <div id="services-container">
             <img id="services-image" src="img/Computer-Accessories.jpg">
-            <div class="secondary-text">
+            <div id="secondary-text">
                 Tenemos a la venta todo tipo de copmputadoras y accesorios de las mejores marcas, desde laptops y computadoras de escritorios 
                 hasta audífonos y memorias usb:
                 <ul>
@@ -128,7 +128,7 @@
     <div style="display: flex; justify-content: center; width: 100%;">
         <div id="services-container">
             <img id="services-image" src="img/valery-screen.jpg">
-            <div class="secondary-text">
+            <div id="secondary-text">
                 Tenemos a su disposición toda la familia del software empresarial Valery, en todas su versiones:
                 <ul>
                     <li>Vendemos licencias originales Valery</li>
@@ -143,7 +143,7 @@
     <div style="display: flex; justify-content: center; width: 100%;">
         <div id="services-container">
             <img id="services-image" src="img/business-deal.jpg">
-            <div class="secondary-text">
+            <div id="secondary-text">
                 Prestamos servicio a domicilio para comercios y empresas sin costo adicional:
                 <ul>
                     <li>Servicio técnico profesional</li>
@@ -295,6 +295,7 @@
             for(let i=0; i<4; i++){
                 document.getElementById('services-container').id='services-container-column';
                 document.getElementById('services-image').id='services-image-column';
+                document.getElementById('secondary-text').id='secondary-text-column';
             }
             document.getElementById('location-column').style.flexDirection='column';
             document.getElementsByClassName('change-to-width')[0].style.width='100%';
@@ -318,6 +319,7 @@
                 document.getElementsByClassName('first')[0].style.paddingBottom='40px'
                 if(document.getElementById('services-container')) document.getElementById('services-container').id='services-container-column';
                 if(document.getElementById('services-image'))document.getElementById('services-image').id='services-image-column';
+                if(document.getElementById('secondary-text'))document.getElementById('secondary-text').id='secondary-text-column';
                 document.getElementsByClassName('change-to-width')[0].style.width='100%';
                 document.getElementsByClassName('change-to-width')[0].style.paddingRight='0';
                 document.getElementsByClassName('change-to-width')[0].style.height='350px';
@@ -333,6 +335,7 @@
                 document.getElementsByClassName('first')[0].style.paddingBottom='80px';
                 if(document.getElementById('services-container-column')) document.getElementById('services-container-column').id='services-container';
                 if(document.getElementById('services-image-column'))document.getElementById('services-image-column').id='services-image';
+                if(document.getElementById('secondary-text-column'))document.getElementById('secondary-text-column').id='secondary-text';
                 document.getElementsByClassName('change-to-width')[0].style.width='50%';
                 document.getElementsByClassName('change-to-width')[0].style.paddingRight='10px';
                 document.getElementsByClassName('change-to-width')[0].style.height='auto';
